@@ -1,0 +1,21 @@
+{
+  "name": "unstorage-drivers",
+  "module": "index.ts",
+  "type": "module",
+   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow bun"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "unstorage": "^1.10.2"
+  }
+}
