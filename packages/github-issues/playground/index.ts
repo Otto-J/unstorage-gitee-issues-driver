@@ -12,5 +12,11 @@ const storage = createStorage({
 // const keys = await storage.getKeys();
 // console.log(1, keys);
 
-const item = await storage.getItem("7");
-console.log(3, item);
+// const item = await storage.getItem("7");
+// console.log(3, item);
+
+// const itemRaw = await storage.getItemRaw("7");
+// console.log(3, itemRaw);
+
+// const hasItem = await storage.hasItem("7");
+// console.log(4, hasItem);
