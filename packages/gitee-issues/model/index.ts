@@ -25,15 +25,16 @@ export const fetchIssues = async (options: GiteeIssuesDriverOptions) => {
   return fetch(`${baseUrl}?${params.toString()}`)
     .then((res) => res.json())
     .then((list: any) => {
-      return (list as any[])
+      // console.log(list, 2);
+      return ((list ?? []) as any[])
         .map((issue) => ({
           id: issue.number,
           title: issue.title,
           labels: (issue.labels as any[]).map((label) =>
             typeof label === "string" ? label : label.name
           ),
-          body: issue.body,
-          // body: encodeURIComponent(issue.body),
+          // body: issue.body,
+          body: encodeURIComponent(issue.body),
           created_at: issue.created_at,
           updated_at: issue.updated_at,
         }))

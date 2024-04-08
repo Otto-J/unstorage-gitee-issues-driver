@@ -1,5 +1,16 @@
+# @web.worker/unstorage-gitee-issues-drivers
+
+## install
+
+```shell
+npm i unstorage @web.worker/unstorage-gitee-issues-drivers
+```
+
+## useage
+
+```js
 import { createStorage } from "unstorage";
-import { giteeIssuesDriver } from "..";
+import { giteeIssuesDriver } from "@web.worker/unstorage-gitee-issues-drivers";
 
 const storage = createStorage({
   driver: giteeIssuesDriver({
@@ -13,3 +24,5 @@ const storage = createStorage({
 
 const keys = await storage.getKeys();
 console.log("get keys", keys);
+// you need use JSON.parse
+```

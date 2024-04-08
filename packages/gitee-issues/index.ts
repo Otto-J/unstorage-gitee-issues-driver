@@ -53,7 +53,7 @@ export const giteeIssuesDriver = defineDriver(
         if (Date.now() > expire || cache.length === 0) {
           // 过期
           const data = await fetchIssues(options);
-          console.log("fetch data");
+          // console.log("fetch data");
           // console.log(JSON.stringify(data, null, 2));
 
           cache = data;
