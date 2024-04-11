@@ -1,5 +1,5 @@
 import { createStorage } from "unstorage";
-import { giteeIssuesDriver } from "..";
+import { giteeIssuesDriver } from "../index-parse-content";
 
 const storage = createStorage({
   driver: giteeIssuesDriver({
@@ -16,7 +16,7 @@ const con = keys.map((key) => JSON.parse(key));
 console.log(
   "get keys",
   con.map((post) => {
-    const { body, ...other } = post;
+    const { body, bodyHtml, ...other } = post;
     return other;
   })
 );
