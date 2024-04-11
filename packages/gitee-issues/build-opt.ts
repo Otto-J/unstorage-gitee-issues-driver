@@ -1,5 +1,5 @@
 await Bun.build({
-  entrypoints: ["./index.ts"],
+  entrypoints: ["./index-parse-content.ts"],
   outdir: "./dist",
   external: ["unstorage"],
   target: "node",

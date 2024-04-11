@@ -2,7 +2,7 @@
   "name": "@web.worker/unstorage-gitee-issues-drivers",
   "module": "dist/index.js",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "access": "public",
   "files": [
     "dist/index.js",
@@ -12,6 +12,9 @@
   "exports": {
     ".": {
       "default": "./dist/index.js"
+    },
+    "./parse": {
+      "default": "./dist/index-parse-content.js"
     }
   },
   "scripts": {

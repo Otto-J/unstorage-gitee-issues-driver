@@ -1,5 +1,7 @@
 import { createStorage } from "unstorage";
-import { giteeIssuesDriver } from "../index-parse-content";
+import { giteeIssuesDriver } from "@web.worker/unstorage-gitee-issues-drivers/parse";
+// import { giteeIssuesDriver } from "../index-parse-content";
+// @web.worker/unstorage-gitee-issues-drivers
 
 const storage = createStorage({
   driver: giteeIssuesDriver({
