@@ -5,7 +5,7 @@
   "version": "0.0.3",
   "access": "public",
   "files": [
-    "dist/index.js",
+    "dist",
     "packages.json",
     "README.md"
   ],
