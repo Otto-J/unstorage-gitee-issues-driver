@@ -15,10 +15,17 @@ const storage = createStorage({
 
 const keys = await storage.getKeys();
 const con = keys.map((key) => JSON.parse(key));
-console.log(
-  "get keys",
-  con.map((post) => {
+
+const list = con
+  .map((post) => {
     const { body, bodyHtml, ...other } = post;
     return other;
   })
-);
+  .sort((a, b) => b.update_at - a.update_at);
+// .sort((a, b) => b.created_at - a.created_at);
+const list2 = list.map((post) => ({
+  title: post.title,
+  created_at: new Date(post.created_at).toLocaleString(),
+  updated_at: new Date(post.updated_at).toLocaleString(),
+}));
+console.log(list2);
