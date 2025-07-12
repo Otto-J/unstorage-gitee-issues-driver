@@ -12,16 +12,13 @@
   "exports": {
     ".": {
       "default": "./dist/index.js"
-    },
-    "./parse": {
-      "default": "./dist/index-parse-content.js"
     }
   },
-  "scripts": {
-    "preinstall": "npx only-allow bun"
-  },
+  "scripts": {},
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/node": "^22.15.30",
+    "gray-matter": "^4.0.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
